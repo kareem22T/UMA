@@ -321,13 +321,12 @@ header {
         .courses_wrapper {
             @extend .flex-center;
             gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             flex-wrap: wrap;
             .course_card {
                 display: flex;
                 flex-direction: column;
-                min-width: 220px;
-                flex: 1;
-                max-width: calc(25%);
                 text-decoration: none;
                 color: #000;
                 transition: all .2s ease-in;
@@ -439,7 +438,6 @@ header {
             .courses_wrapper {
                 gap: 17px; // 20px * 0.8421 ≈ 17px
                 .course_card {
-                    min-width: 220px; // 220px * 0.8421 ≈ 185px
                     // flex property remains the same
                     // max-width remains the same as it's a percentage
                     .img {
@@ -494,11 +492,6 @@ header {
     }
     .our-major .container .courses_wrapper {
         gap: 12px;
-    }
-    .our-major .container .courses_wrapper .course_card {
-        min-width: 150px;
-        max-width: 50%;
-        height: 190px;
     }
     .our-major .container .courses_wrapper .course_card .img .date {
         font-size: 10px;
@@ -1662,5 +1655,15 @@ footer {
     footer .container:last-child {
         padding: 24px 16px;
         font-size: 11px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .our-major .container .courses_wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    .course_card .img {
+        height: 160px !important;
     }
 }
