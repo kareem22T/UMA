@@ -1975,7 +1975,7 @@ footer {
     padding: 48px 0;
     .container {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         gap: 48px;
         align-items: start;
         .options_wrapper {
@@ -1993,6 +1993,10 @@ footer {
                 flex-direction: column;
                 gap: 8px;
                 margin-bottom: 40px;
+                display: none;
+                &:first-of-type {
+                    display: flex;
+                }        
                 span {
                     font-size: 16px;
                     font-weight: 400;
@@ -2018,6 +2022,11 @@ footer {
                     @extend .flex-center;
                     justify-content: space-between;
                     margin-bottom: 20px;
+                    display: none;
+                    &:first-child {
+                        display: flex;
+                    }
+            
                     span {
                         font-size: 20px;
                         font-weight: 700;
@@ -2088,6 +2097,11 @@ footer {
             }
         }
         .content_wapper {
+            display: none;
+            flex-direction: column;
+            &:first-child {
+                display: block;
+            }    
             h1 {
                 font-size: 40px;
                 font-weight: 700;

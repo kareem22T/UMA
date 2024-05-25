@@ -1885,7 +1885,7 @@ footer .container:last-child a {
 }
 .overview_wrapper .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   gap: 48px;
   align-items: start;
 }
@@ -1905,6 +1905,10 @@ footer .container:last-child a {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 40px;
+  display: none;
+}
+.overview_wrapper .container .options_wrapper .info:first-of-type {
+  display: flex;
 }
 .overview_wrapper .container .options_wrapper .info span {
   font-size: 16px;
@@ -1930,6 +1934,10 @@ footer .container:last-child a {
 .overview_wrapper .container .options_wrapper .info-menu .head {
   justify-content: space-between;
   margin-bottom: 20px;
+  display: none;
+}
+.overview_wrapper .container .options_wrapper .info-menu .head:first-child {
+  display: flex;
 }
 .overview_wrapper .container .options_wrapper .info-menu .head span {
   font-size: 20px;
@@ -1994,6 +2002,13 @@ footer .container:last-child a {
 .overview_wrapper .container .options_wrapper .apply:hover {
   background-color: #282828;
   color: #F2C572;
+}
+.overview_wrapper .container .content_wapper {
+  display: none;
+  flex-direction: column;
+}
+.overview_wrapper .container .content_wapper:first-child {
+  display: block;
 }
 .overview_wrapper .container .content_wapper h1 {
   font-size: 40px;
